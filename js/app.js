@@ -368,9 +368,11 @@ document.getElementById('btn-custom').addEventListener('click', () => {
     const val    = parseInt(input.value, 10);
     if (!VALID_FINISHES.includes(val)) {
         errEl.textContent = t('btn.customError');
+        errEl.classList.remove('d-none');
         return;
     }
     errEl.textContent = '';
+    errEl.classList.add('d-none');
     startNewGame(val);
 });
 
