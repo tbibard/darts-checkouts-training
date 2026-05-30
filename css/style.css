@@ -29,10 +29,27 @@ body {
     letter-spacing: 3px;
 }
 
-/* ─── Sélecteur de langue ─── */
-#lang-switcher {
+/* ─── Groupe droite header (version + langue) ─── */
+#header-right {
     position: absolute;
     right: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#btn-version {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-color: #30363d;
+    color: #8b949e;
+    letter-spacing: 1px;
+}
+#btn-version:hover { border-color: #58a6ff; color: #e6edf3; }
+
+/* ─── Sélecteur de langue ─── */
+#lang-switcher {
     display: flex;
     gap: 4px;
     align-items: center;

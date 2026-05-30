@@ -389,6 +389,21 @@ document.getElementById('opt-wide-rings').addEventListener('change',  e => {
 });
 document.getElementById('opt-voice').addEventListener('change', e => { options.voice = e.target.checked; });
 
+function loadReleases() {
+    fetch('releases.json')
+        .then(r => r.json())
+        .then(data => {
+            document.getElementById('btn-version').textContent = 'v' + data.version;
+            const sorted = [...data.releases].sort((a, b) => b.date.localeCompare(a.date));
+            document.getElementById('releases-list').innerHTML = sorted.map(r => `
+                <div class="mb-3">
+                    <div class="fw-bold text-warning">${r.date}</div>
+                    <div style="font-size:0.9rem">${r.description}</div>
+                </div>`).join('<hr class="border-secondary my-2">');
+        });
+}
+
 buildDartboard(onDartClick, options.wideRings);
 applyTranslations();
 renderUI();
+loadReleases();

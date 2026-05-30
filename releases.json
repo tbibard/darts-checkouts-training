@@ -1,0 +1,13 @@
+{
+  "version": "0.1.1",
+  "releases": [
+    {
+      "date": "2026-05-30",
+      "description": "Ajout du bouton de version avec historique des releases dans une modale."
+    },
+    {
+      "date": "2025-05-29",
+      "description": "Version initiale : interface de jeu avec cible SVG, panneau de stats, options de jeu (triple manqué, doubles élargis, voix), i18n FR/EN et checkouts alternatifs."
+    }
+  ]
+}
