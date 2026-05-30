@@ -78,6 +78,8 @@ function canFinishIn(remaining, dartsLeft) {
 }
 
 function startNewGame(customFinish = null) {
+    posthog.capture('startNewGame', {'options': options, 'customFinish': customFinish})
+
     if (customFinish !== null) {
         game.finish = customFinish;
     } else {
@@ -171,6 +173,9 @@ function endGame(state) {
             speechSynthesis.speak(utt);
         }
     }
+
+    posthog.capture('endGame', {'game': game, 'stats': stats})
+
     renderStats();
 }
 
@@ -393,6 +398,8 @@ document.getElementById('opt-voice').addEventListener('change', e => { options.v
 let releasesData = null;
 
 function renderReleases() {
+    posthog.capture('renderReleases', {'release': releasesData.version})
+
     if (!releasesData) return;
     const sorted = [...releasesData.releases].sort((a, b) => b.date.localeCompare(a.date));
     document.getElementById('releases-list').innerHTML = sorted.map(r => {
