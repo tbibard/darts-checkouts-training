@@ -76,4 +76,4 @@ In accordance with the General Data Protection Regulation (GDPR) and applicable 
 
 ### Intellectual Property
 
-The source code of this project is published as open source on GitHub. Content (code, interface, text) is protected by copyright. Refer to the GitHub repository for usage terms and licence details.
+The source code of this project is published as open source on GitHub. Content (code, interface, text) is protected by copyright. This project is licensed under the [MIT License](LICENSE).
