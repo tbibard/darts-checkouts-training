@@ -4,8 +4,8 @@
     {
       "date": "2026-05-30",
       "description": {
-        "fr": "Ajout du bouton de version avec historique des releases dans une modale.",
-        "en": "Added version button with release history in a modal."
+        "fr": "Ajout du bouton de version avec historique des releases dans une modale, infos légales et crédits.",
+        "en": "Added version button with release history in a modal, legal infos and credits."
       }
     },
     {

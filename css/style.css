@@ -38,25 +38,25 @@ body {
 }
 
 #btn-legal {
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 2px 8px;
+    /*font-size: 0.75rem;*/
+    /*font-weight: 700;*/
+    padding: 2px 7px;
     border-color: #30363d;
     color: #8b949e;
-    border-radius: 50%;
-    line-height: 1.2;
+    /*border-radius: 50%;*/
+    /*line-height: 1.2;*/
     text-decoration: none;
 }
 #btn-legal:hover { border-color: #58a6ff; color: #e6edf3; }
 
 #btn-help {
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 2px 8px;
+    /*font-size: 0.65rem;*/
+    /*font-weight: 700;*/
+    padding: 2px 7px;
     border-color: #30363d;
     color: #8b949e;
-    border-radius: 50%;
-    line-height: 1.2;
+    /*border-radius: 50%;*/
+    /*line-height: 1.2;*/
 }
 #btn-help:hover { border-color: #58a6ff; color: #e6edf3; }
 
@@ -70,8 +70,8 @@ body {
 }
 
 #btn-version {
-    font-size: 0.65rem;
-    font-weight: 700;
+    /*font-size: 0.65rem;*/
+    /*font-weight: 700;*/
     padding: 2px 7px;
     border-color: #30363d;
     color: #8b949e;
@@ -88,10 +88,10 @@ body {
 .lang-btn {
     background: none;
     border: 1px solid #30363d;
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     color: #8b949e;
-    font-size: 0.65rem;
-    font-weight: 700;
+    /*font-size: 0.65rem;*/
+    /*font-weight: 700;*/
     padding: 2px 7px;
     cursor: pointer;
     letter-spacing: 1px;
@@ -349,6 +349,12 @@ body {
     left: 0;
     color: #f0a500;
     font-weight: 700;
+}
+
+.help-section-author {
+    border-top: 1px solid #30363d;
+    padding-top: 18px;
+    text-align: center;
 }
 
 /* ─── Mobile ─── */
