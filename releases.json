@@ -3,11 +3,17 @@
   "releases": [
     {
       "date": "2026-05-30",
-      "description": "Ajout du bouton de version avec historique des releases dans une modale."
+      "description": {
+        "fr": "Ajout du bouton de version avec historique des releases dans une modale.",
+        "en": "Added version button with release history in a modal."
+      }
     },
     {
       "date": "2025-05-29",
-      "description": "Version initiale : interface de jeu avec cible SVG, panneau de stats, options de jeu (triple manqué, doubles élargis, voix), i18n FR/EN et checkouts alternatifs."
+      "description": {
+        "fr": "Version initiale : interface de jeu avec cible SVG, panneau de stats, options de jeu (triple manqué, doubles élargis, voix), i18n FR/EN et checkouts alternatifs.",
+        "en": "Initial version: game interface with SVG dartboard, stats panel, game options (missed triple, wide doubles, voice), FR/EN i18n and alternative checkouts."
+      }
     }
   ]
 }

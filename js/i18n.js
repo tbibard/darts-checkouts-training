@@ -5,6 +5,9 @@
 
 const TRANSLATIONS = {
     fr: {
+        /* Modale releases */
+        'releases.title':         'Historique des versions',
+
         /* Libellés de section */
         'label.finish':           'Checkout à réaliser',
         'label.darts':            'Fléchettes',
@@ -56,6 +59,9 @@ const TRANSLATIONS = {
     },
 
     en: {
+        /* Modale releases */
+        'releases.title':         'Version history',
+
         'label.finish':           'Checkout to complete',
         'label.darts':            'Darts',
         'label.time':             'Time',
@@ -125,6 +131,9 @@ function t(key, vars = {}) {
 function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         el.textContent = t(el.dataset.i18n);
+    });
+    document.querySelectorAll('[data-lang]:not(.lang-btn)').forEach(el => {
+        el.style.display = el.dataset.lang === currentLang ? '' : 'none';
     });
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === currentLang);

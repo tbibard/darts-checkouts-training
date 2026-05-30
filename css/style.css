@@ -29,6 +29,25 @@ body {
     letter-spacing: 3px;
 }
 
+/* ─── Groupe gauche header (titre) ─── */
+#header-left {
+    position: absolute;
+    left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#btn-help {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-color: #30363d;
+    color: #8b949e;
+    border-radius: 50%;
+    line-height: 1.2;
+}
+#btn-help:hover { border-color: #58a6ff; color: #e6edf3; }
+
 /* ─── Groupe droite header (version + langue) ─── */
 #header-right {
     position: absolute;
@@ -264,6 +283,61 @@ body {
 .alt-dart.mid   { color: #ccc; }
 .alt-dart.last  { color: #58a6ff; }
 .alt-sep { color: #444; font-size: 0.65rem; }
+
+/* ─── Modale aide ─── */
+.help-modal-body {
+    padding: 20px 24px;
+    color: #cdd5df;
+}
+.help-section { margin-bottom: 24px; }
+.help-section:last-child { margin-bottom: 0; }
+
+.help-section-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f0a500;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.help-modal-body p { font-size: 0.88rem; line-height: 1.6; margin-bottom: 8px; }
+
+.help-dl dt {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-top: 10px;
+}
+.help-dl dd {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-left: 0;
+    color: #cdd5df;
+}
+
+.help-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.help-ul li {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    padding: 5px 0 5px 16px;
+    border-bottom: 1px solid #21262d;
+    position: relative;
+}
+.help-ul li:last-child { border-bottom: none; }
+.help-ul li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #f0a500;
+    font-weight: 700;
+}
 
 /* ─── Mobile ─── */
 @media (max-width: 900px) {

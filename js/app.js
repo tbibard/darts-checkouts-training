@@ -183,6 +183,7 @@ function renderUI() {
     renderDartSlots();
     renderResult();
     renderAlternatives();
+    renderReleases();
 }
 
 function renderFinishPanel() {
@@ -389,17 +390,29 @@ document.getElementById('opt-wide-rings').addEventListener('change',  e => {
 });
 document.getElementById('opt-voice').addEventListener('change', e => { options.voice = e.target.checked; });
 
+let releasesData = null;
+
+function renderReleases() {
+    if (!releasesData) return;
+    const sorted = [...releasesData.releases].sort((a, b) => b.date.localeCompare(a.date));
+    document.getElementById('releases-list').innerHTML = sorted.map(r => {
+        const desc = typeof r.description === 'object'
+            ? (r.description[currentLang] ?? r.description.fr ?? '')
+            : r.description;
+        return `<div class="mb-3">
+                    <div class="fw-bold text-warning">${r.date}</div>
+                    <div style="font-size:0.9rem">${desc}</div>
+                </div>`;
+    }).join('<hr class="border-secondary my-2">');
+}
+
 function loadReleases() {
     fetch('releases.json')
         .then(r => r.json())
         .then(data => {
+            releasesData = data;
             document.getElementById('btn-version').textContent = 'v' + data.version;
-            const sorted = [...data.releases].sort((a, b) => b.date.localeCompare(a.date));
-            document.getElementById('releases-list').innerHTML = sorted.map(r => `
-                <div class="mb-3">
-                    <div class="fw-bold text-warning">${r.date}</div>
-                    <div style="font-size:0.9rem">${r.description}</div>
-                </div>`).join('<hr class="border-secondary my-2">');
+            renderReleases();
         });
 }
 

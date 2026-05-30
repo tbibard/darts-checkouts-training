@@ -10,22 +10,143 @@
 <body>
 
 <header id="app-header">
-    DARTS CHECKOUTS
+    <div id="header-left">
+        DARTS CHECKOUTS
+    </div>
     <div id="header-right">
         <div id="lang-switcher">
             <button class="lang-btn active" data-lang="fr">FR</button>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
         <button id="btn-version" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#releases-modal"></button>
+        <button id="btn-help" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#help-modal" title="Aide">?</button>
     </div>
 </header>
+
+<!-- Modal aide -->
+<div class="modal fade" id="help-modal" tabindex="-1" aria-labelledby="help-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="help-modal-label">
+                    <span data-lang="fr">À propos de Darts Checkouts</span>
+                    <span data-lang="en">About Darts Checkouts</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body help-modal-body">
+
+                <!-- ── FR ── -->
+                <div data-lang="fr">
+                    <section class="help-section">
+                        <h6 class="help-section-title">Objectifs &amp; Intentions</h6>
+                        <p>
+                            <strong>Darts Checkouts</strong> est un entraîneur mental pour le jeu de fléchettes en mode
+                            <strong>X01 (501, 301…)</strong>. L'objectif&nbsp;: mémoriser et calculer instantanément les
+                            combinaisons de fléchettes qui ferment une manche — avant même de viser.
+                        </p>
+                        <p>
+                            Chaque session vous expose à des finishs variés. Avec la répétition, les séquences deviennent
+                            des réflexes&nbsp;: un 121, un 170 ou un 36 se reconnaissent sans effort de calcul.
+                        </p>
+                    </section>
+
+                    <section class="help-section">
+                        <h6 class="help-section-title">Concepts clés</h6>
+                        <dl class="help-dl">
+                            <dt>Checkout / Finish</dt>
+                            <dd>Combinaison de fléchettes atteignant exactement 0, en terminant sur un double.</dd>
+
+                            <dt>Double out</dt>
+                            <dd>La dernière fléchette doit obligatoirement toucher une double (D1–D20) ou le Bull (50).</dd>
+
+                            <dt>Bust</dt>
+                            <dd>Dépasser 0 ou finir sans double annule le tour. Le score revient à son état d'avant la volée.</dd>
+
+                            <dt>Secteurs de la cible</dt>
+                            <dd>
+                                20 secteurs numérotés, chacun avec trois zones&nbsp;:
+                                <strong>simple</strong>, <strong>triple</strong> (anneau intérieur ×3)
+                                et <strong>double</strong> (anneau extérieur ×2).
+                                Le <strong>Bull</strong> central vaut 50 (double bull), le Semi-bull vaut 25.
+                            </dd>
+                        </dl>
+                    </section>
+
+                    <section class="help-section">
+                        <h6 class="help-section-title">Modes d'entraînement</h6>
+                        <ul class="help-ul">
+                            <li><strong>Aléatoire</strong> — "Nouveau Checkout" tire un finish entre 2 et 170.</li>
+                            <li><strong>≥ 99 uniquement</strong> — Se concentre sur les grands finishs, les moins intuitifs.</li>
+                            <li><strong>Checkout personnalisé</strong> — Travaillez une combinaison précise en tapant un score.</li>
+                            <li><strong>Triple manqué</strong> — Mode difficile&nbsp;: une triple visée peut être ratée aléatoirement, forçant un recalcul à la volée.</li>
+                            <li><strong>Masquer le restant</strong> — Cache le score intermédiaire pour s'entraîner au calcul mental pur.</li>
+                            <li><strong>Triples et doubles élargis</strong> — Zones de clic agrandies, utiles sur petits écrans.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- ── EN ── -->
+                <div data-lang="en">
+                    <section class="help-section">
+                        <h6 class="help-section-title">Goals &amp; Purpose</h6>
+                        <p>
+                            <strong>Darts Checkouts</strong> is a mental trainer for <strong>X01 darts (501, 301…)</strong>
+                            in double-out format. The goal: memorise and instantly recall the dart combinations that close
+                            a leg — before you even aim.
+                        </p>
+                        <p>
+                            Each session exposes you to varied finishes. With repetition, sequences become reflexes:
+                            121, 170 or 36 are recognised without conscious calculation.
+                        </p>
+                    </section>
+
+                    <section class="help-section">
+                        <h6 class="help-section-title">Key Concepts</h6>
+                        <dl class="help-dl">
+                            <dt>Checkout / Finish</dt>
+                            <dd>A dart combination that reaches exactly 0, ending on a double.</dd>
+
+                            <dt>Double out</dt>
+                            <dd>The last dart must land on a double (D1–D20) or the Bull (50).</dd>
+
+                            <dt>Bust</dt>
+                            <dd>Exceeding 0 or finishing without a double voids the turn. The score reverts to before the throw.</dd>
+
+                            <dt>Board sectors</dt>
+                            <dd>
+                                20 numbered sectors, each with three scoring zones:
+                                <strong>single</strong>, <strong>triple</strong> (inner ring ×3)
+                                and <strong>double</strong> (outer ring ×2).
+                                The <strong>Bull</strong> scores 50 (double bull), the outer bull scores 25.
+                            </dd>
+                        </dl>
+                    </section>
+
+                    <section class="help-section">
+                        <h6 class="help-section-title">Training Modes</h6>
+                        <ul class="help-ul">
+                            <li><strong>Random</strong> — "New Checkout" draws a finish between 2 and 170.</li>
+                            <li><strong>≥ 99 only</strong> — Focus on high finishes, the ones memory automates least.</li>
+                            <li><strong>Custom Checkout</strong> — Drill a specific combination by entering a score.</li>
+                            <li><strong>Missed triple</strong> — Hard mode: a targeted triple can randomly miss, forcing an on-the-fly recalculation.</li>
+                            <li><strong>Hide remaining</strong> — Hides the intermediate score to train pure mental arithmetic.</li>
+                            <li><strong>Wide triples &amp; doubles</strong> — Enlarged click zones, useful on small screens.</li>
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal releases -->
 <div class="modal fade" id="releases-modal" tabindex="-1" aria-labelledby="releases-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content bg-dark text-light">
             <div class="modal-header border-secondary">
-                <h5 class="modal-title" id="releases-modal-label">Historique des versions</h5>
+                <h5 class="modal-title" id="releases-modal-label" data-i18n="releases.title">Historique des versions</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body" id="releases-list"></div>
