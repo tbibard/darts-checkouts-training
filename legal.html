@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales — Darts Checkouts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        html, body { height: auto; overflow: auto; }
+
+        #legal-header {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #21262d;
+            font-weight: 900;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        #legal-header a {
+            position: absolute;
+            left: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #8b949e;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding: 2px 8px;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            transition: color .15s, border-color .15s;
+        }
+        #legal-header a:hover { color: #e6edf3; border-color: #58a6ff; }
+
+        #legal-lang {
+            position: absolute;
+            right: 12px;
+            display: flex;
+            gap: 4px;
+        }
+
+        #legal-main {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .legal-page-title {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f0a500;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .legal-section {
+            margin-bottom: 28px;
+        }
+
+        .legal-section-title {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f0a500;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        .legal-section p,
+        .legal-section li {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: #cdd5df;
+        }
+
+        .legal-section a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        .legal-section a:hover { text-decoration: underline; }
+
+        .legal-entity {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #e6edf3;
+            margin-bottom: 6px;
+        }
+
+        .legal-note {
+            font-size: 0.75rem;
+            color: #8b949e;
+            border-left: 2px solid #30363d;
+            padding-left: 10px;
+            margin-top: 8px;
+        }
+
+        .legal-divider {
+            border: none;
+            border-top: 1px solid #21262d;
+            margin: 36px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header id="legal-header">
+    <a href="index.html">← DARTS CHECKOUTS</a>
+    <span>
+        <span data-lang="fr">MENTIONS LÉGALES</span>
+        <span data-lang="en" style="display:none">LEGAL NOTICES</span>
+    </span>
+    <div id="legal-lang">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+</header>
+
+<main id="legal-main">
+
+    <!-- ══ FRANÇAIS ══ -->
+    <div data-lang="fr">
+
+        <div class="legal-page-title">Mentions légales &amp; Crédits</div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Éditeur du site</div>
+            <p class="legal-entity">Thomas Bibard — Personne physique</p>
+            <p>
+                Conformément à l'article 6-III de la loi n°&nbsp;2004-575 du 21 juin 2004
+                pour la Confiance dans l'Économie Numérique (LCEN), le présent site est édité
+                par une personne physique.
+            </p>
+            <p>
+                Contact et signalement via la page GitHub du projet&nbsp;:<br>
+                <a href="https://github.com/tbibard/darts-checkouts-training" target="_blank" rel="noopener">
+                    github.com/tbibard/darts-checkouts-training
+                </a>
+            </p>
+            <div class="legal-note">
+                La page GitHub du projet est le canal privilégié pour remonter des
+                <strong>bugs</strong>, formuler des <strong>demandes d'évolution</strong>
+                ou partager des <strong>suggestions</strong>.
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Hébergeur</div>
+            <p class="legal-entity">OVH SAS</p>
+            <p>
+                2 rue Kellermann<br>
+                59100 Roubaix<br>
+                France<br>
+                <a href="https://ovhcloud.com" target="_blank" rel="noopener">ovhcloud.com</a>
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Objet du site</div>
+            <p>
+                <strong>Darts Checkouts</strong> est un projet personnel à but non commercial.
+                Il s'agit d'un entraîneur mental pour le jeu de fléchettes en mode
+                <strong>X01 (501, 301&hellip;)</strong> en double-out, permettant de mémoriser
+                et de calculer instantanément les combinaisons de fléchettes qui ferment une manche.
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Données personnelles &amp; Cookies</div>
+            <p>
+                Ce site <strong>ne collecte aucune donnée personnelle</strong>.
+                Aucun cookie tiers n'est déposé sur votre navigateur.
+            </p>
+            <p>
+                Les préférences de jeu (langue, options) sont enregistrées localement dans
+                le navigateur via <strong>localStorage</strong>. Ces données restent sur votre
+                appareil et ne sont jamais transmises à des serveurs tiers.
+            </p>
+            <div class="legal-note">
+                Conformément au Règlement Général sur la Protection des Données (RGPD)
+                et à la loi Informatique et Libertés, vous disposez d'un droit d'accès,
+                de rectification et d'effacement de ces données locales (via les paramètres
+                de votre navigateur).
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Propriété intellectuelle</div>
+            <p>
+                Le code source de ce projet est publié en <strong>open source</strong> sur GitHub.
+                Les contenus (code, interface, textes) sont protégés par le droit d'auteur.
+                Se référer au dépôt GitHub pour les conditions d'utilisation et les détails de licence.
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Crédits</div>
+            <p>
+                Interface réalisée en HTML, JavaScript et SVG.<br>
+                Framework CSS&nbsp;: <a href="https://getbootstrap.com" target="_blank" rel="noopener">Bootstrap 5</a> (MIT Licence).<br>
+                Cible de fléchettes&nbsp;: dessin SVG généré programmatiquement.<br>
+                Voix / synthèse vocale&nbsp;: Web Speech API (navigateur).
+            </p>
+        </div>
+
+    </div>
+    <!-- /FR -->
+
+    <!-- ══ ENGLISH ══ -->
+    <div data-lang="en" style="display:none">
+
+        <div class="legal-page-title">Legal Notices &amp; Credits</div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Website Publisher</div>
+            <p class="legal-entity">Thomas Bibard — Individual</p>
+            <p>
+                In accordance with Article 6-III of French Law n°&nbsp;2004-575 of 21 June 2004
+                on Trust in the Digital Economy (LCEN), this website is published by an individual.
+            </p>
+            <p>
+                Contact and reporting via the project's GitHub page:<br>
+                <a href="https://github.com/tbibard/darts-checkouts-training" target="_blank" rel="noopener">
+                    github.com/tbibard/darts-checkouts-training
+                </a>
+            </p>
+            <div class="legal-note">
+                The project's GitHub page is the preferred channel to report
+                <strong>bugs</strong>, submit <strong>feature requests</strong>
+                or share <strong>suggestions</strong>.
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Hosting Provider</div>
+            <p class="legal-entity">OVH SAS</p>
+            <p>
+                2 rue Kellermann<br>
+                59100 Roubaix<br>
+                France<br>
+                <a href="https://ovhcloud.com" target="_blank" rel="noopener">ovhcloud.com</a>
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Purpose</div>
+            <p>
+                <strong>Darts Checkouts</strong> is a personal, non-commercial project.
+                It is a mental trainer for <strong>X01 darts (501, 301&hellip;)</strong>
+                in double-out format, designed to help players memorise and instantly recall
+                the dart combinations that close a leg.
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Personal Data &amp; Cookies</div>
+            <p>
+                This website <strong>does not collect any personal data</strong>.
+                No third-party cookies are placed on your browser.
+            </p>
+            <p>
+                Game preferences (language, options) are stored locally in your browser via
+                <strong>localStorage</strong>. This data stays on your device and is never
+                transmitted to any third-party server.
+            </p>
+            <div class="legal-note">
+                In accordance with the General Data Protection Regulation (GDPR) and applicable
+                data-protection law, you have the right to access, correct, and delete this
+                local data through your browser settings.
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Intellectual Property</div>
+            <p>
+                The source code of this project is published as <strong>open source</strong>
+                on GitHub. Content (code, interface, text) is protected by copyright.
+                Refer to the GitHub repository for usage terms and licence details.
+            </p>
+        </div>
+
+        <div class="legal-section">
+            <div class="legal-section-title">Credits</div>
+            <p>
+                Interface built with HTML, JavaScript and SVG.<br>
+                CSS framework: <a href="https://getbootstrap.com" target="_blank" rel="noopener">Bootstrap 5</a> (MIT Licence).<br>
+                Dartboard: programmatically generated SVG drawing.<br>
+                Voice / speech synthesis: Web Speech API (browser-native).
+            </p>
+        </div>
+
+    </div>
+    <!-- /EN -->
+
+</main>
+
+<script>
+    let lang = 'fr';
+    function applyLang(l) {
+        lang = l;
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.classList.contains('lang-btn')) return;
+            el.style.display = el.dataset.lang === lang ? '' : 'none';
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        document.documentElement.lang = lang;
+        document.title = lang === 'fr'
+            ? 'Mentions légales — Darts Checkouts'
+            : 'Legal Notices — Darts Checkouts';
+    }
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+
+    /* Sync with the language stored by the main app */
+    const stored = localStorage.getItem('lang');
+    if (stored === 'en') applyLang('en');
+</script>
+</body>
+</html>
