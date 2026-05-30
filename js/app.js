@@ -398,8 +398,6 @@ document.getElementById('opt-voice').addEventListener('change', e => { options.v
 let releasesData = null;
 
 function renderReleases() {
-    posthog.capture('renderReleases', {'release': releasesData.version})
-
     if (!releasesData) return;
     const sorted = [...releasesData.releases].sort((a, b) => b.date.localeCompare(a.date));
     document.getElementById('releases-list').innerHTML = sorted.map(r => {
@@ -411,6 +409,8 @@ function renderReleases() {
                     <div style="font-size:0.9rem">${desc}</div>
                 </div>`;
     }).join('<hr class="border-secondary my-2">');
+
+    posthog.capture('renderReleases', {'release': releasesData.version})
 }
 
 function loadReleases() {
