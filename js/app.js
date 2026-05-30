@@ -420,3 +420,4 @@ buildDartboard(onDartClick, options.wideRings);
 applyTranslations();
 renderUI();
 loadReleases();
+new bootstrap.Modal(document.getElementById('help-modal')).show();
