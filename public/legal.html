@@ -6,119 +6,24 @@
     <title>Mentions légales — Darts Checkouts</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        html, body { height: auto; overflow: auto; }
-
-        #legal-header {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid #21262d;
-            font-weight: 900;
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            flex-shrink: 0;
-            position: relative;
-        }
-        #legal-header a {
-            position: absolute;
-            left: 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #8b949e;
-            text-decoration: none;
-            letter-spacing: 1px;
-            padding: 2px 8px;
-            border: 1px solid #30363d;
-            border-radius: 4px;
-            transition: color .15s, border-color .15s;
-        }
-        #legal-header a:hover { color: #e6edf3; border-color: #58a6ff; }
-
-        #legal-lang {
-            position: absolute;
-            right: 12px;
-            display: flex;
-            gap: 4px;
-        }
-
-        #legal-main {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 32px 20px 60px;
-        }
-
-        .legal-page-title {
-            font-size: 1rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #f0a500;
-            margin-bottom: 32px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .legal-section {
-            margin-bottom: 28px;
-        }
-
-        .legal-section-title {
-            font-size: 0.62rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #f0a500;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
-        }
-
-        .legal-section p,
-        .legal-section li {
-            font-size: 0.88rem;
-            line-height: 1.7;
-            color: #cdd5df;
-        }
-
-        .legal-section a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-        .legal-section a:hover { text-decoration: underline; }
-
-        .legal-entity {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #e6edf3;
-            margin-bottom: 6px;
-        }
-
-        .legal-note {
-            font-size: 0.75rem;
-            color: #8b949e;
-            border-left: 2px solid #30363d;
-            padding-left: 10px;
-            margin-top: 8px;
-        }
-
-        .legal-divider {
-            border: none;
-            border-top: 1px solid #21262d;
-            margin: 36px 0;
-        }
-    </style>
+    <link href="css/legal.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
 
-<header id="legal-header">
-    <a href="index.html">← DARTS CHECKOUTS</a>
-    <span>
-        <span data-lang="fr">MENTIONS LÉGALES</span>
-        <span data-lang="en" style="display:none">LEGAL NOTICES</span>
-    </span>
-    <div id="legal-lang">
+<header id="legal-header" class="d-flex justify-content-between">
+    <div class="ps-2">
+        <a class="btn btn-sm btn-outline-secondary" href="index.html"><i class="bi bi-arrow-left-square"></i></a>
+    </div>
+
+    <div>
+        <span>
+            <span data-lang="fr">MENTIONS LÉGALES</span>
+            <span data-lang="en" style="display:none">LEGAL NOTICES</span>
+        </span>
+    </div>
+
+    <div class="pe-2">
         <button class="lang-btn active" data-lang="fr">FR</button>
         <button class="lang-btn" data-lang="en">EN</button>
     </div>
