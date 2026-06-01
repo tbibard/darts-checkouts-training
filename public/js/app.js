@@ -78,7 +78,14 @@ function canFinishIn(remaining, dartsLeft) {
 }
 
 function startNewGame(customFinish = null) {
-    posthog.capture('startNewGame', {'options': options, 'customFinish': customFinish})
+    posthog.capture('startNewGame', {
+        'dct_minFinish99':   options.minFinish99,
+        'dct_hideRemaining': options.hideRemaining,
+        'dct_missedTriple':  options.missedTriple,
+        'dct_wideRings':     options.wideRings,
+        'dct_voice':         options.voice,
+        'dct_customFinish': customFinish
+    })
 
     if (customFinish !== null) {
         game.finish = customFinish;
@@ -174,7 +181,12 @@ function endGame(state) {
         }
     }
 
-    posthog.capture('endGame', {'game': game, 'stats': stats})
+    posthog.capture('endGame', {
+        'dct_finish':         game.finish,
+        'dct_remaining':      game.remaining,
+        'dct_elapsed':        game.elapsed,
+        'dct_state':          game.state,
+    })
 
     renderStats();
 }
