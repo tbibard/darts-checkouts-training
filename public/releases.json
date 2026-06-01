@@ -1,6 +1,13 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "releases": [
+    {
+      "date": "2026-06-01",
+      "description": {
+        "fr": "Correction des couleurs des secteurs de la cible.",
+        "en": "Color correction of the dartboard sectors."
+      }
+    },
     {
       "date": "2026-05-30",
       "description": {

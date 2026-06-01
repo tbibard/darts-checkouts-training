@@ -79,7 +79,7 @@ function buildDartboard(clickHandler, wideRings = false) {
     NUMBERS.forEach((num, i) => {
         const a1   = i * 18 - 9, a2 = a1 + 18;
         const even = i % 2 === 0;
-        const sc   = even ? COLOR.light : COLOR.dark;
+        const sc   = even ? COLOR.dark  : COLOR.light;
         const rc   = even ? COLOR.red   : COLOR.green;
 
         const sectors = [
