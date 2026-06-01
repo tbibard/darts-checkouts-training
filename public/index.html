@@ -18,6 +18,8 @@
     <script>
         if (new URLSearchParams(window.location.search).get('exclude') === 'true') {
             posthog.opt_out_capturing();
+        } else {
+            posthog.opt_in_capturing();
         }
     </script>
 </head>
