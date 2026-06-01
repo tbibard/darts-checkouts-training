@@ -16,7 +16,7 @@
         })
     </script>
     <script>
-        if (new URLSearchParams(window.location.search).get('exclude') === 'true') {
+        if (new URLSearchParams(window.location.search).get('exclude') === 'true' || window.location.hostname.endsWith('.local')) {
             posthog.opt_out_capturing();
         } else {
             posthog.opt_in_capturing();
