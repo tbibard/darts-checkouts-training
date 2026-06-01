@@ -65,7 +65,17 @@ const game = {
     thrownEls:      [],
 };
 
-const stats = { ok: 0, total: 0, bestTime: null, totalTime: 0 };
+function generateSessionId() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+        return crypto.randomUUID();
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = Math.random() * 16 | 0;
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+
+const stats = { sessionId: generateSessionId(), ok: 0, total: 0, bestTime: null, totalTime: 0 };
 
 /* Vérifie qu'un score peut être terminé en double-out avec au plus dartsLeft fléchettes */
 function canFinishIn(remaining, dartsLeft) {
@@ -186,6 +196,11 @@ function endGame(state) {
         'dct_remaining':      game.remaining,
         'dct_elapsed':        game.elapsed,
         'dct_state':          game.state,
+        'dct_session_id':     stats.sessionId,
+        'dct_ok':             stats.ok,
+        'dct_total':          stats.total,
+        'dct_bestTime':       stats.bestTime,
+        'dct_totalTime':      stats.totalTime,
     })
 
     renderStats();
